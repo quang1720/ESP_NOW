@@ -7,7 +7,7 @@ import threading
 ser = None
 def init_bytes():
     data_ref = []
-    for i in range(0, 2):
+    for i in range(0,1):
         for j in range(0, 250):
             if i == 1:
                 data_ref.append(249 - j)
@@ -32,7 +32,7 @@ def write_serial():
         while True:
             if data is None: continue
             ser.write(data)
-            time.sleep(1/15)
+            time.sleep(1/50)
     except Exception as ex:
          print(f"Write error: {ex}")
 
